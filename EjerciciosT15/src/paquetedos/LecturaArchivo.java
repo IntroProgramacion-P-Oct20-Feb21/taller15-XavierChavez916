@@ -29,9 +29,9 @@ public class LecturaArchivo {
             Scanner entrada = new Scanner(new File("data/datos1.csv"));
 
             while (entrada.hasNext()) {
-                String linea = entrada.nextLine();
-                List<String> lista = Arrays.asList(linea.split(","));
-                ArrayList<String> linea_partes = new ArrayList<>(lista);
+                String linea = entrada.nextLine(); // ARENILLAS, 62
+                List<String> lista = Arrays.asList(linea.split(",")); // ["ARENILLAS","62"]
+                ArrayList<String> linea_partes = new ArrayList<>(lista); // ["ARENILLAS","62" ]
                 // recuerde en el ArrayList existe elementos de tipo 
                 // String
                 numeroEstablecimientos = linea_partes.get(1); // obtengo el
@@ -45,6 +45,8 @@ public class LecturaArchivo {
                 // para transformar un valor de tipo String a Entero
                 numeroEstablecimientosEntero = Integer.parseInt(numeroEstablecimientos);
                 // agregar código aquí
+                // System.out.printf("%d\n",numeroEstablecimientosEntero);
+                suma = suma + numeroEstablecimientosEntero;
                 
                 
             } // fin de while

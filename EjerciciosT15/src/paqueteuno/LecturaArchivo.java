@@ -26,9 +26,9 @@ public class LecturaArchivo {
             Scanner entrada = new Scanner(new File("data/datos1.csv"));
 
             while (entrada.hasNext()) {
-                String linea = entrada.nextLine();
-                List<String> lista = Arrays.asList(linea.split(","));
-                ArrayList<String> linea_partes = new ArrayList<>(lista);
+                String linea = entrada.nextLine(); // "ARENILLAS, 62"
+                List<String> lista = Arrays.asList(linea.split(",")); // ["Arenillas", "62"]
+                ArrayList<String> linea_partes = new ArrayList<>(lista); // ["Arenillas", "62"]
                 for (int i = 0; i < linea_partes.size(); i++) {
                     System.out.println(linea_partes.get(i));
                 }
